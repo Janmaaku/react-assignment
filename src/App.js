@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from './Navbar'
 import {Routes, Route}  from 'react-router-dom'
-import Text from './pages/Text'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
 import Home from './pages/Home'
@@ -15,7 +14,6 @@ function App() {
         <div>
           <Routes>
               <Route path="/" element={<Home/>}/>
-              <Route path="/text" element={<Text/>}/>
               <Route path="/log" element={<Login/>}/>
               <Route path="/reg" element={<Registration/>}/>
           </Routes>

@@ -20,9 +20,6 @@ function Navbar(){
             <li className="nav-item">
                 <Link className="nav-link py-3 justify-context-end" to="/">Home</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link py-3 justify-context-end" to="/text">Text</Link>
-              </li>
               <li>
                 <Link to="/reg" className="btn  " id="reg">Register</Link>
                 <Link to="/log" className="btn p-12" style={{height: "50px"}} id="log">Log In</Link>   
