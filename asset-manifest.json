@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-assignment/static/css/main.1e6c033f.css",
+    "main.js": "/react-assignment/static/js/main.79e87e3a.js",
+    "static/media/skating_banner_2.jpeg": "/react-assignment/static/media/skating_banner_2.7589b89c8200c1f2dc8b.jpeg",
+    "static/media/tara.png": "/react-assignment/static/media/tara.dd7b44569069bef5f05e.png",
+    "index.html": "/react-assignment/index.html",
+    "main.1e6c033f.css.map": "/react-assignment/static/css/main.1e6c033f.css.map",
+    "main.79e87e3a.js.map": "/react-assignment/static/js/main.79e87e3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e6c033f.css",
+    "static/js/main.79e87e3a.js"
+  ]
+}
