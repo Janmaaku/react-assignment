@@ -50,9 +50,6 @@ const submitBtn = function(e){
 }
 
   
-
-
-
     return(
         <div>
               <section className="vh-100" >
@@ -132,7 +129,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" name="pass" value={pass} onChange={(e) => setPass(e.target.value)} className="form-control" />
+                      <Link to="/"> <input type="password" id="form3Example4c" name="pass" value={pass} onChange={(e) => setPass(e.target.value)} className="form-control" /> </Link>
                       <label className="form-label" for="form3Example4c">Password</label>
                     </div>
                   </div>
