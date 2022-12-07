@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 function Footer(){
     return(
         <div>
-        <footer bgColor='light' className='text-center text-lg-start text-muted'>
+        <footer  className='text-center text-lg-start text-muted'>
         
         <section className="">
           <div className='text-center text-md-start mt-5 d-flex'>

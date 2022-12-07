@@ -5,6 +5,8 @@ import Login from './pages/Login'
 import Registration from './pages/Registration'
 import Home from './pages/Home'
 import Footer from './Components/Footer'
+import User from './pages/Userlogin';
+
 
 function App() {
   console.log(window.location.pathname)
@@ -13,15 +15,22 @@ function App() {
         <Navbar/>
         <div>
           <Routes>
-              <Route path="/" element={<Home/>}/>
+              <Route path="/react-assignment/home" element={<Home />}/>
+              <Route path="/home" element={<Home/>}/>
               <Route path="/log" element={<Login/>}/>
               <Route path="/reg" element={<Registration/>}/>
+              <Route path="/userlogin" element={<User/>}/>
+             
+
           </Routes>
         </div>
-        <div className="text-align-center" style={{display: "inline-flex"}}>
+        
         <Footer />
-        </div>
+       
     </div>
+    
+
+    
   );
 }
 

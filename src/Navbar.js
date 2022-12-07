@@ -18,7 +18,7 @@ function Navbar(){
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-3 py-2" id="ul">
             <li className="nav-item">
-                <Link className="nav-link py-3 justify-context-end" to="/">Home</Link>
+                <Link className="nav-link py-3 justify-context-end" to="/home">Home</Link>
               </li>
               <li>
                 <Link to="/reg" className="btn  " id="reg">Register</Link>

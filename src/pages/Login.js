@@ -1,27 +1,28 @@
 import { useEffect , useState} from 'react';
 import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
+
 function Login(){
-    const [username, setUsername] = useState();
-    const [password, setPassword] = useState();
+    const [email, setUsername] = useState();
+    const [pass, setPassword] = useState();
     const [db, setDb] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const url = 'http://localhost/react-app/db.php';
+        const url = 'http://localhost/react-app/db.php'
         axios.get(url).then((response) =>{
             setDb(response.data);
             db.map((val)=>{
                 return(
-                    console.log(val.username)
+                    console.log(val.email)
                 )
             })
         })
     },[])
 const submitBtn = function (e){
     e.preventDefault();
-    console.log(document.getElementById("username").value);
-    console.log(document.getElementById("password").value);
+    console.log(document.getElementById("email").value);
+    console.log(document.getElementById("pass").value);
 
     let getData = new FormData();
     axios({
@@ -29,15 +30,16 @@ const submitBtn = function (e){
         url:    'http://localhost/react-app/db.php', //db link
         data: getData,
         config: 'Content-Type="multipart/form-control"'  //data to be transferred
-    }).then(function(){
-        const url = 'http://localhost/react-app/db.php';
+    })
+    .then(function(){
+        const url = 'http://localhost/react-app/db.php'
         axios.get(url).then((response) =>{
             setDb(response.data);
             db.map((val)=>{
-                if ((val.username) == (document.getElementById('username').value) && (val.password)== (document.getElementById('password').value)) {
+                if ((val.email_add) == (document.getElementById('email').value) && (val.pass)== (document.getElementById('pass').value)) {
                     return(
                         alert ("Successfully Logged in"),
-                        navigate('/home')
+                        navigate('/userlogin')
                     )
                 }
                 
@@ -53,10 +55,10 @@ const submitBtn = function (e){
             <div className="login-container text-white ">
             <h2>Hello, Tara Takbo</h2>
             <form className="form-container mb-4 mt-4">
-                <label for="email"  className="mb-6 text-dark">Email</label><br/>
-                <input type="text" id="username" name="username" className="mb-3" value={username} onChange={(e) => setUsername(e.target.value)}/><br/>
-                <label for="password" className="mb-2 text-dark">Password</label><br/>
-                <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <label htmlFor="email"  className="mb-6 text-dark">Email</label><br/>
+                <input type="text" id="email" name="email" className="mb-3" value={email} onChange={(e) => setUsername(e.target.value)}/><br/>
+                <label htmlFor="password" className="mb-2 text-dark">Password</label><br/>
+                <input type="password" id="pass" name="pass" value={pass} onChange={(e) => setPassword(e.target.value)}/>
                 <br/><br/>
                 <input type="submit" name="log" id="logButton" value="Login" onClick={submitBtn}/>
             </form>
