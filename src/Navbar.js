@@ -8,7 +8,7 @@ function Navbar(){
         <div>
        <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 d-flex mb-3">
         <div className="container-fluid">
-            <img src={one} alt="" className="rounded rounded-circle" style={{height: "6rem"}}/>
+            <Link to="/"><img src={one} alt="" className="rounded rounded-circle" style={{height: "6rem"}}/></Link>
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 

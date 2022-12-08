@@ -68,7 +68,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" name="fname" value={fname} onChange={(e) => setFname(e.target.value)} className="form-control" />
+                      <input type="text" id="form3Example1c" name="fname" value={fname} onChange={(e) => setFname(e.target.value)} className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example1c">Your Name</label>
                     </div>
                   </div>
@@ -76,7 +76,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" name="lname" value={lname} onChange={(e) => setLname(e.target.value)} className="form-control" />
+                      <input type="text" id="form3Example1c" name="lname" value={lname} onChange={(e) => setLname(e.target.value)} className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example1c">Last Name</label>
                     </div>
                   </div>
@@ -84,7 +84,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="date" id="form3Example3c" name="dob" value={dob} onChange={(e) => setDob(e.target.value)} className="form-control" />
+                      <input type="date" id="form3Example3c" name="dob" value={dob} onChange={(e) => setDob(e.target.value)} className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example3c">Date of Birth</label>
                     </div>
                   </div>
@@ -93,9 +93,10 @@ const submitBtn = function(e){
                     <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
                     <div class="form-outline mb-4">
-                  <label class="form-label" >Gender: </label>
-                  <select id="male" >
-                    <option name="gender" value={gender} onChange={(e) => setGender(e.target.value)} className="form-control" >Male</option>
+                  <label class="form-label m-2" >Gender: </label>
+                  <select id="gender" name="gender" value={gender} onChange={(e) => setGender(e.target.value)}>
+                    <option name="gender" >Male</option>
+                    <option name="gender"  >Female</option>
                    
                   </select>
                 </div>
@@ -107,7 +108,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3c" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" />
+                      <input type="email" id="form3Example3c" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example3c">Your Email</label>
                     </div>
                   </div>
@@ -115,7 +116,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="number" id="form3Example4c" name="cpnum" value={cpnum} onChange={(e) => setCnumber(e.target.value)} className="form-control" />
+                      <input type="number" id="form3Example4c" name="cpnum" value={cpnum} onChange={(e) => setCnumber(e.target.value)} className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example4c">Contact Number</label>
                     </div>
                   </div>
@@ -123,7 +124,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="file" id="form3Example4c" name="pic"  accept=" .jpg, .jpeg, .png" value={pic} onChange={(e) => setPic(e.target.value)} className="form-control" />
+                      <input type="file" id="form3Example4c" name="pic"  accept=" .jpg, .jpeg, .png" value={pic} onChange={(e) => setPic(e.target.value)} className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example4c">Picure</label>
                     </div>
                   </div>
@@ -131,7 +132,7 @@ const submitBtn = function(e){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                       <input type="password" id="form3Example4c" name="pass" value={pass} onChange={(e) => setPass(e.target.value)} className="form-control" /> 
+                       <input type="password" id="form3Example4c" name="pass" value={pass} onChange={(e) => setPass(e.target.value)} className="form-control" required/> 
                       <label className="form-label" htmlFor="form3Example4c">Password</label>
                     </div>
                   </div>
@@ -144,7 +145,7 @@ const submitBtn = function(e){
                   </div>
 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                  <Link to="/"><input type="submit" className="btn btn-primary btn-lg" name="submit" onClick={submitBtn}/></Link>
+                  <Link to="/registration"><input type="submit" className="btn btn-primary btn-lg" name="submit" onClick={submitBtn}/></Link>
                   </div>
 
                 </form>
@@ -163,32 +164,11 @@ const submitBtn = function(e){
     </div>
   </div>
 </section>
-         
+         <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
         </div>
 
     )
-    // function saveImage(){
-    //     let reader = new FileReader();
-    //     reader.addEventListener("load", function(){
-    //         sessionStorage.setItem("img", reader.result);
-    //             showImage();
-    //             })
-               
-    //         }
     
-    // function showImage(){
-    //     let showImage = document.getElementById("showImage");
-    //     let imageURL = sessionStorage.getItem("img");
-    //     showImage.innerHTML = "<img src= '" + imageURL + " 'style='width: 100px'>";
-    // }
-    
-    // function showText{
-    //   let name = document.getElementById("showText");
-    
-    //   if(name == ""){
-    //     document.getElementById("error").innerHTML = "* Name is required";
-    //   }
-    // }
     
 }
 export default Registration;

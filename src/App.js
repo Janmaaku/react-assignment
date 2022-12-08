@@ -15,7 +15,10 @@ function App() {
         <Navbar/>
         <div>
           <Routes>
-              <Route path="/react-assignment/home" element={<Home />}/>
+              <Route path="/react-assignment/" element={<Home />}/>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/" element={<Login/>}/>
+              <Route path="/" element={<Registration/>}/>
               <Route path="/home" element={<Home/>}/>
               <Route path="/log" element={<Login/>}/>
               <Route path="/reg" element={<Registration/>}/>

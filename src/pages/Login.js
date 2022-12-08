@@ -30,8 +30,7 @@ const submitBtn = function (e){
         url:    'http://localhost/react-app/db.php', //db link
         data: getData,
         config: 'Content-Type="multipart/form-control"'  //data to be transferred
-    })
-    .then(function(){
+    }).then(function(){
         const url = 'http://localhost/react-app/db.php'
         axios.get(url).then((response) =>{
             setDb(response.data);
@@ -41,8 +40,8 @@ const submitBtn = function (e){
                         alert ("Successfully Logged in"),
                         navigate('/userlogin')
                     )
-                }
-                
+                } 
+                     
             })
         }) 
     })
